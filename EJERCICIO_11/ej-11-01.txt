@@ -1,0 +1,32 @@
+ALGORIMTO DE EUCLIDES Versión 1
+
+Entrada
+   a : ENTERO
+   b : ENTERO
+
+Salida : ENTERO  #mcd(a,b)
+
+Precondiciones
+   a >= 0
+   b >= 0
+
+Variables
+   r : ENTERO  #resto
+
+Realización
+# primero nos aseguramos de que a >= b
+   Si a < b entonces
+      intercambiar a y b
+   Fin Si
+   
+   r <-- a mod(b)  # calculamos el resto
+   Mientras r =/ 0    # mientras el resto sea distinto de 0
+      a <-- b         # b pasa a ser el dividendo
+      b <-- r         # r pasa a ser el divisor
+      r <-- a mod(b)  # calculamos el nuevo resto
+   Fin Mientras
+   
+   Resultado <-- b
+
+Postcondiciones
+    mcd(a,b) = mcd(b,r)  # el mcd de a y b es el mismo que el de b y el resto
