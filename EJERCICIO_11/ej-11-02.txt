@@ -1,0 +1,13 @@
+ALGORIMTO DE EUCLIDES Versión 2: calcular el mcd haciendo solo sumas o restas
+
+Entrada
+   a : ENTERO
+   b : ENTERO
+
+Salida : ENTERO  #mcd(a,b)
+
+Precondiciones
+   a >= 0
+   b >= 0
+
+
