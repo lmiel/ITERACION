@@ -1,5 +1,6 @@
-ALGORIMTO DE EUCLIDES Versión 1
+MAXIMO COMUN DIVISOR Versión 1: Algorimto Euclides
 
+Algoritmo mcd_1
 Entrada
    a : ENTERO
    b : ENTERO
@@ -20,7 +21,9 @@ Realización
    Fin Si
    
    r <-- a mod(b)  # calculamos el resto
-   Mientras r =/ 0    # mientras el resto sea distinto de 0
+   Mientras 
+      r ≠ 0    # mientras el resto sea distinto de 0
+   Repetir
       a <-- b         # b pasa a ser el dividendo
       b <-- r         # r pasa a ser el divisor
       r <-- a mod(b)  # calculamos el nuevo resto
@@ -30,3 +33,5 @@ Realización
 
 Postcondiciones
     mcd(a,b) = mcd(b,r)  # el mcd de a y b es el mismo que el de b y el resto
+
+Fin mcd_1

@@ -1,13 +1,30 @@
-ALGORIMTO DE EUCLIDES Versión 2: calcular el mcd haciendo solo sumas o restas
+MAXIMO COMUN DIVISOR Versión 2: haciendo solo sumas o restas
 
+Algoritmo mcd_2
 Entrada
-   a : ENTERO
-   b : ENTERO
+    a : ENTERO
+    b : ENTERO
 
 Salida : ENTERO  #mcd(a,b)
 
 Precondiciones
-   a >= 0
-   b >= 0
+    a >= 0
+    b >= 0
 
+Realización
+    Mientras
+        a ≠ b
+    Repetir
+        Si a>b entonces 
+            a <-- a-b
+        Si no
+            b <-- b-a
+        Fin Si
+    Fin Mientras
 
+    Resultado <-- a
+
+Postcondicion
+    Resultado = mcd(a,b)
+
+Fin mcd_2
