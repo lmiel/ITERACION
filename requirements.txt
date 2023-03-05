@@ -1,0 +1,3 @@
+
+tabulate -m pip install tabulate
+python3 
