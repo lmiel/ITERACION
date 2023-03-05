@@ -17,15 +17,33 @@ También es posible definir un tipo nuevo de datos, PALABRA, formado con una cad
 3. Escribir el algoritmo que permite añadir una palabra nueva al diccionario.
 4. Escribir el algoritmo de eliminación de una palabra.
 Puede encontrar este ejercicio resuelto y la solución analizada en los elementos disponibles para descargar desde la página Información."""
-diccionario =   [['limón', 9, 1],
-['manzana', 0, 2],
-['melocotón', 1, 8],
-['banana', -1, 4],
-['fresa', 3, 9],
-['uva', 6, -1],
-['sandía', 7, 5],
-['pera', 8, 6],
-['naranja', 2, 7],
-['kiwi', 4, 0]]
+diccionario =   [["limón", 9, 1],
+["manzana", 0, 2],
+["melocotón", 1, 8],
+["banana", -1, 4],
+["fresa", 3, 9],
+["uva", 6, -1],
+["sandía", 7, 5],
+["pera", 8, 6],
+["naranja", 2, 7],
+["kiwi", 4, 0]]
 
-palabras = [palabra, siguiente, anterior]
+primera_palabra = 3
+ultima_palabra = 5
+
+def buscar_palabra():
+    letra = input("Introduzca la letra por la que empiecen las palabras que desee buscar: ")
+    i = primera_palabra
+    for palabra in range(len(diccionario)):
+        if diccionario[i][0][0] == letra:
+            break
+        else:
+            i = diccionario[i][2]
+    solucion = []
+    while diccionario[i][0][0] == letra:
+        solucion.append(diccionario[i][0])
+        i = diccionario[i][2]
+    print(solucion)
+
+
+buscar_palabra()
