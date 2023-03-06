@@ -1,0 +1,32 @@
+CUADRADO PERFECTO
+
+Algoritmo lista_cuadrados_perfectos(n:ENTERO) : TABLA[ENTERO][0,n-1]
+    # este algoritmo devuelve una lista de los cuadrados perfectos menores que un entero dado
+
+Precondiciones
+    n >= 0
+    indice_min(cuad)>=0
+    indice_max(cuad)>=0
+
+Variables
+    i:ENTERO  # contador
+    cuad: TABLA[ENTERO][1,n]  # tabla que vamos a ir inicializando con los cuadrados perfectos que vayamos encontrando
+
+Realización
+    Inicialización
+        i <-- 0
+        cuad <-- vacio  # inicializamos la tabla
+
+    Mientras
+        i*i <= n
+    Repetir
+        cuad[i] <-- i*i
+        i+1 <-- i
+    Fin Mientras
+
+    Devolver cuad
+
+Postcondición
+    para todo indice_min(cuad) <= i <= indice_max(cuad) : cuad[i] = i*i
+
+Fin lista_cuadrados_perfectos
