@@ -1,0 +1,28 @@
+RAÍZ ENTERA DE UN ENTERO
+
+Algoritmo raiz_entera(n:ENTERO) : ENTERO
+
+Precondición
+    n >= 0
+
+Variables
+    r:ENTERO
+
+Realización
+    Inicialización
+        r <-- 0
+    Mientras 
+        r <= n
+    Repetir
+        si r*r <= n <= (r+1)*(r+1) entonces
+            Resultado <-- r
+        si no
+            r <-- r + 1
+        
+        Fin Si
+    Fin Mientras
+
+Postcondición
+    Resultado^2 <= n <= (Resultado+1)^2
+
+Fin raiz_entera
